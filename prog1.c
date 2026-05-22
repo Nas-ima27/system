@@ -8,7 +8,7 @@ int main(int argc, char *argv[]) {
     // Vérification du nombre d'arguments
     if (argc < 3) {
         printf("Usage : %s <nombre_copies> <prog1> <prog2> ...\n", argv[0]);
-        return 1;
+return 1;
     }
 
     // Nombre de copies
