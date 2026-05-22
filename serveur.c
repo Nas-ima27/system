@@ -14,15 +14,12 @@
 #include <arpa/inet.h>   /* inet_ntoa, htons … */
 #include <sys/socket.h>
 #include <sys/types.h>
-
 /* ── Constantes ─────────────────────────────────────────── */
 #define TAILLE_MSG   256
 #define MAX_CONN     5
 #define MOT_QUITTER  "quitter"
-
 /* ── Prototype ───────────────────────────────────────────── */
 void chat(int socket_client, const char *ip_client, int port_client);
-
 /* ================================================================
  *  MAIN
  * ================================================================ */

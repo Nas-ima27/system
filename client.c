@@ -14,14 +14,11 @@
 #include <arpa/inet.h>
 #include <sys/socket.h>
 #include <sys/types.h>
-
 /* ── Constantes ─────────────────────────────────────────── */
 #define TAILLE_MSG   256
 #define MOT_QUITTER  "quitter"
-
 /* ── Prototype ───────────────────────────────────────────── */
 void chat(int desc_socket);
-
 /* ================================================================
  *  MAIN
  * ================================================================ */
@@ -32,12 +29,10 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Usage : %s <ip_serveur> <port>\n", argv[0]);
         exit(EXIT_FAILURE);
     }
-
     /* ── 2. Initialisation des variables ───────────────────── */
     int    desc;              /* descripteur du socket client */
     int    err;
     struct sockaddr_in adresse_distante;   /* adresse du serveur */
-
     /* ── 3. Création du socket ─────────────────────────────── */
     desc = socket(AF_INET, SOCK_STREAM, 0);
     if (desc < 0) {
@@ -45,7 +40,6 @@ int main(int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
     printf("[OK] Socket créé (desc=%d)\n", desc);
-
     /* ── 4. Préparation de l'adresse du serveur ────────────── */
     memset(&adresse_distante, 0, sizeof(adresse_distante));
     adresse_distante.sin_family = AF_INET;
